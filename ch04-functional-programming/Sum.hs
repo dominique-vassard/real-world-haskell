@@ -1,4 +1,4 @@
-module Sum(mySum, mySumAcc, foldlSum, niceSum) where
+module Sum(mySum, mySumAcc, foldlSum, niceSum, niceSum') where
 
 mySum :: [Int] -> Int
 mySum [] = 0
@@ -24,3 +24,6 @@ niceSum xs = foldl (+) 0 xs
 --           == foldl (+) ((0 + 1) + 2)       (3:[])
 --           == foldl (+) (((0 + 1) + 2) + 3) []
 --           ==           (((0 + 1) + 2) + 3)
+
+niceSum' :: [Int] -> Int
+niceSum' = foldl (+) 0
